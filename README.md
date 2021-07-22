@@ -1,6 +1,9 @@
 # AwAngularUi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+Projeto gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 12.1.0, para consumo da API 
+https://github.com/brunobd7/aw-spring-angular. 
+
+Abaixo comandos utéis do Angular CLI para execução do projeto.
 
 ## Development server
 
