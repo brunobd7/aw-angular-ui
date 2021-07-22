@@ -1,7 +1,7 @@
 # AwAngularUi
 
 Projeto gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 12.1.0, para consumo da API 
-https://github.com/brunobd7/aw-spring-angular. 
+https://github.com/brunobd7/aw-spring-angular utilizando Angular com a biblioteca PrimeNG.
 
 Abaixo comandos utéis do Angular CLI para execução do projeto.
 
