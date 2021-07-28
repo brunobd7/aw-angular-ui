@@ -28,14 +28,14 @@
   </div>
 
   <div class="p-grid">
-    
+
     <div class="p-col-12">
       <!-- LISTA A SER PERCORRIDO USANDO BINDING -->
-      <p-table [value] = "lancamentos">
+      <p-table [value]="lancamentos" [paginator]=true [rows]=3 [responsive]="true">
 
         <!-- HEADERS TABELA -->
         <ng-template pTemplate="header">
-          
+
           <tr>
             <th>Cliente</th>
             <th>Tipo</th>
@@ -45,7 +45,7 @@
             <th class="col-valor">Valor</th>
             <th></th>
             <!-- <th class="col-valor"> <button pButton label="TESTE"></button> </th> -->
-            
+
           </tr>
 
         </ng-template>
@@ -54,32 +54,58 @@
         <ng-template pTemplate="body" let-produto>
 
           <tr>
-            <td>{{produto.pessoa}}</td>
-            <td>{{produto.tipo}}</td>
-            <td>{{produto.descricao}}</td>
-            <td>{{produto.dataVencimento}}</td>
-            <td>{{produto.dataPagamento}}</td>
-            <td [ngStyle]="{color: produto.tipo == 'DESPESA' ? 'red' : 'blue'}">{{produto.valor}}</td>
+            <td>
+              <span class="p-column-title">Pessoa</span>
+              {{produto.pessoa}}
+            </td>
+            <td>
+              <span class="p-column-title">Tipo</span>
+              {{produto.tipo}}
+            </td>
+            <td>
+              <span class="p-column-title">Descrição</span>
+              {{produto.descricao}}
+            </td>
+            <td>
+              <span class="p-column-title">Vencimento</span>
+              {{produto.dataVencimento}}
+            </td>
+            <td>
+              <span class="p-column-title">Pagamento</span>
+              {{produto.dataPagamento}}
+            </td>
+            <td [ngStyle]="{color: produto.tipo == 'DESPESA' ? 'red' : 'blue'}">
+              <span class="p-column-title">Valor</span>
+              {{produto.valor}}
+            </td>
             <!-- <td>
               <span [ngStyle]="{color: produto.tipo == 'DESPESA' ? 'red' : 'blue'}">{{produto.valor}}</span>
             </td> -->
             <td class="col-acoes">
 
-              <a pButton icon="pi pi-pencil"></a>
+              <a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="left"></a>
 
-              <button pButton icon="pi pi-trash"></button>
+              <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="right"></button>
 
             </td>
             <!-- <td><button pButton label="TESTE"></button></td> -->
-            
+
           </tr>
 
         </ng-template>
-    
+
       </p-table>
 
 
     </div>
 
   </div>
+
+  <div class="p-grid">
+    <div class="p-col-12">
+      <button pButton type="submit" label="Novo Lançamento"></button>
+    </div>
+
+  </div>
+
 </div>
