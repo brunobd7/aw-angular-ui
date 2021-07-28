@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    margin: 10;
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     color: #404C51;
 }
@@ -9,9 +9,11 @@ label {
     font-weight: bold;
 }
 
-.container{
-    width: 1170px;
-    margin: 0 auto;
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+        margin: 0 auto;
+    }
 }
 
 @media(min-width: 40em) {
