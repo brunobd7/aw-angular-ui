@@ -68,15 +68,16 @@
               </td>
               <td>
                 <span class="p-column-title">Vencimento</span>
-                {{produto.dataVencimento}}
+                {{produto.dataVencimento | date: 'dd/MM/yyyy'}}
               </td>
               <td>
                 <span class="p-column-title">Pagamento</span>
-                {{produto.dataPagamento}}
+                {{produto.dataPagamento | date: 'dd/MM/yyy'}}
               </td>
               <td [ngStyle]="{color: produto.tipo == 'DESPESA' ? 'red' : 'blue'}">
                 <span class="p-column-title">Valor</span>
-                {{produto.valor}}
+                {{produto.valor | currency: 'BRL'}}
+                <!-- {{produto.valor | number:'1.0-2' }} NUMBER PIPE-->
               </td>
               <!-- <td>
                 <span [ngStyle]="{color: produto.tipo == 'DESPESA' ? 'red' : 'blue'}">{{produto.valor}}</span>
