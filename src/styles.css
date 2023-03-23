@@ -14,20 +14,17 @@ label {
     margin: 0 auto;
 }
 
-@media(min-width: 40em) {
-    
 .col-valor{
     width: 120px;
-    text-align: right !important;
+    text-align: right;
 }
 
 .col-data{
     width: 120px;
-    text-align: center !important;
+    text-align: center;
 }
 
 .col-acoes{
     width: 90px;
-    text-align: center !important;
-}
+    text-align: center;
 }
