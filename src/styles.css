@@ -9,11 +9,6 @@ label {
     font-weight: bold;
 }
 
-.p-col-12{
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
 @media(min-width:1200px){
     .container{
         width: 1170px;
@@ -23,18 +18,18 @@ label {
 
 @media(min-width: 40em) {
     
-    .col-valor{
-        width: 120px;
-        text-align: right !important;
-    }
+.col-valor{
+    width: 120px;
+    text-align: right !important;
+}
 
-    .col-data{
-        width: 120px;
-        text-align: center !important;
-    }
+.col-data{
+    width: 120px;
+    text-align: center !important;
+}
 
-    .col-acoes{
-        width: 90px;
-        text-align: center !important;
-    }
+.col-acoes{
+    width: 90px;
+    text-align: center !important;
+}
 }
