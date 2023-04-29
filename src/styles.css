@@ -9,36 +9,33 @@ label {
   font-weight: bold;
 }
 
-/*MEDIA QUERIES*/
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-    margin: 0 auto;
+@media (min-width: 40em) {
+  .col-valor-header {
+    width: 120px;
   }
-}
 
+  .col-valor {
+    text-align: right !important;
+  }
 
-/*TABLE*/
-.col-valor-header {
-  width: 120px;
-}
+  .col-data-header {
+    width: 120px;
+  }
 
-.col-valor-content {
-  text-align: right;
-}
+  .col-data {
+    text-align: center !important;
+  }
 
-.col-data-header {
-  width: 120px;
-}
+  .col-actions-header {
+    width: 115px;
+  }
 
-.col-data-content {
-  text-align: center;
-}
+  .col-actions {
+    width: 115px;
+    text-align: center !important;
+  }
 
-.col-actions{
-  width: 120px;
-}
-
-.button-cell{
-  margin: 1px;
+  .col-actions .p-button {
+    margin: 1px;
+  }
 }

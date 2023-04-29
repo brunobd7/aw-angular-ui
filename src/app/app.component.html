@@ -3,56 +3,78 @@
   <div class="col-12">
     <h1>Launches</h1>
   </div>
-
+<!-- INPUTS -->
   <div class="col-12 p-fluid">
     <label>Description</label>
-    <input type="text" pInputText/>
+    <input type="text" pInputText pTooltip="Launch description"/>
   </div>
 
   <div class="col-12">
     <label style="display: block">Due Date</label>
-    <input pInputText type="text" style="width: 95px">
+    <input pInputText type="text" pTooltip="Initial Date" style="width: 95px">
 
     <label> until </label>
-    <input pInputText type="text" style="width: 95px">
+    <input pInputText type="text" pTooltip="Final Date" style="width: 95px">
 
   </div>
+  <!-- -->
 
   <div class="col-12">
     <button pButton type="submit" label="Search"></button>
   </div>
 
-<!--    <div class="grid">-->
+  <!-- DATA TABLE -->
   <div class="col-12">
-    <p-table [value]="lancamentos" [paginator]="true" [rows]="5">
+    <p-table [value]="lancamentos" [paginator]="true" [rows]="5" [responsive]="true"
+             responsiveLayout="stack">
 
       <ng-template pTemplate="header">
         <tr>
-          <th>Descricao</th>
-          <th class="col-data-header">Data Vencimento</th>
-          <th class="col-data-header">Data Pagamento</th>
-          <th class="col-valor-header">Valor</th>
-          <th>Pessoa</th>
-          <th></th>
+          <th>Person</th>
+          <th>Description</th>
+          <th class="col-data-header">Due Date</th>
+          <th class="col-data-header">Pay Date</th>
+          <th class="col-valor-header">Amount Value</th>
+
+          <th class="col-actions-header"></th>
         </tr>
 
       </ng-template>
 
       <ng-template pTemplate="body" let-lancamento>
-        <tr>
-          <td>{{lancamento.descricao}}</td>
-          <td class="col-data-content">{{lancamento.dataVencimento}}</td>
-          <td class="col-data-content">{{lancamento.dataPagamento}}</td>
 
-          <td class="col-valor-content" [ngStyle]="{color: lancamento.tipo =='DESPESA'?'red':'blue'}">
-            {{lancamento.valor}}
+        <tr>
+          <td>
+            <span class="p-column-title">Description</span>
+            {{lancamento.descricao}}
           </td>
 
-          <td>{{lancamento.pessoa}}</td>
+          <td>
+            <span class="p-column-title">Person</span>
+            {{lancamento.pessoa}}
+          </td>
+
+          <td class="col-data">
+          <span class="p-column-title">Due Date</span>
+          {{lancamento.dataVencimento}}
+          </td>
+
+          <td class="col-data">
+          <span class="p-column-title">Pay Date</span>
+          {{lancamento.dataPagamento}}
+          </td>
+
+          <td class="col-valor">
+          <span class="p-column-title">Amount Value</span>
+          <span [ngStyle]="{color: lancamento.tipo =='DESPESA'?'red':'blue'}">
+            {{lancamento.valor}}
+          </span>
+          </td>
+
 
           <td class="col-actions">
-            <button pButton icon="pi pi-pencil" class="button-cell"></button>
-            <button pButton icon="pi pi-trash" class="button-cell"></button>
+            <button pButton icon="pi pi-pencil" pTooltip="Edit" class="button-cell"></button>
+            <button pButton icon="pi pi-trash" pTooltip="Delete" class="button-cell"></button>
           </td>
         </tr>
 
@@ -60,7 +82,6 @@
 
     </p-table>
   </div>
-<!--    </div>-->
 
   <div class="col-12">
     <button pButton type="submit" label="New Launch"></button>
