@@ -34,3 +34,11 @@ label {
 .col-data-content {
   text-align: center;
 }
+
+.col-actions{
+  width: 120px;
+}
+
+.button-cell{
+  margin: 1px;
+}
